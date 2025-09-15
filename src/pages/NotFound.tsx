@@ -11,25 +11,25 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center gradient-hero">
+    <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center">
         <div className="mb-8">
-          <h1 className="text-8xl font-bold text-primary-foreground mb-4">404</h1>
+          <h1 className="text-8xl font-bold mb-4">404</h1>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <h2 className="text-2xl font-semibold text-primary-foreground mb-2">Page Not Found</h2>
-          <p className="text-primary-foreground/80 max-w-md mx-auto">
+          <h2 className="text-2xl font-semibold mb-2">Page Not Found</h2>
+          <p className="text-muted-foreground max-w-md mx-auto">
             The page you're looking for doesn't exist or has been moved.
           </p>
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="hero" size="lg" asChild>
+          <Button asChild>
             <a href="/">
               <Home className="w-5 h-5" />
               Back to Portfolio
             </a>
           </Button>
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" asChild>
             <a href="/#contact">
               <Search className="w-5 h-5" />
               Get In Touch

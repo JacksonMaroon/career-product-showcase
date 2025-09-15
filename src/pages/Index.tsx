@@ -1,24 +1,22 @@
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
+import SimpleHero from "@/components/SimpleHero";
+import SimpleExperience from "@/components/SimpleExperience";
+import SimpleProjects from "@/components/SimpleProjects";
+import SimpleEducation from "@/components/SimpleEducation";
+import SimpleContact from "@/components/SimpleContact";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
       <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
+        <SimpleHero />
+        <SimpleExperience />
+        <SimpleProjects />
+        <SimpleEducation />
+        <SimpleContact />
       </main>
-      <footer className="bg-muted/30 py-8 text-center">
-        <div className="container mx-auto px-6">
-          <p className="text-muted-foreground">
+      <footer className="py-8 px-6 text-center border-t">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-sm text-muted-foreground">
             © 2024 Jackson Maroon. Built with passion for product management.
           </p>
         </div>

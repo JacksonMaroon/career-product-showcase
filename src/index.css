@@ -2,60 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Professional Product Management Portfolio Design System
-All colors MUST be HSL for consistency and theme switching.
-*/
+/* Minimal Modern Portfolio Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 214 84% 56%;
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 214 76% 67%;
     
-    --secondary: 217 91% 60%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
     
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 0 0% 9%;
     
     --success: 142 76% 36%;
     --success-foreground: 0 0% 98%;
 
-    --muted: 210 40% 94%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 214 84% 56%;
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 0% 9%;
 
-    --radius: 0.75rem;
-    
-    /* Professional gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--secondary) / 0.9));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted) / 0.3));
-    
-    /* Professional shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
-    --shadow-card: 0 4px 20px -4px hsl(var(--foreground) / 0.1);
-    
-    /* Smooth transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -75,48 +57,36 @@ All colors MUST be HSL for consistency and theme switching.
   }
 
   .dark {
-    --background: 222 47% 11%;
+    --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
 
-    --card: 222 40% 13%;
+    --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 222 40% 13%;
+    --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 214 84% 56%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 214 76% 67%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
     
-    --secondary: 217 91% 60%;
+    --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
     
-    --accent: 262 83% 58%;
+    --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
     
     --success: 142 76% 36%;
     --success-foreground: 0 0% 98%;
 
-    --muted: 217 33% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 214 84% 56%;
-    
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted) / 0.5));
-    
-    /* Dark mode shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.4);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -135,65 +105,10 @@ All colors MUST be HSL for consistency and theme switching.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
   
   html {
     scroll-behavior: smooth;
-  }
-}
-
-@layer utilities {
-  .gradient-primary {
-    background: var(--gradient-primary);
-  }
-  
-  .gradient-secondary {
-    background: var(--gradient-secondary);
-  }
-  
-  .gradient-hero {
-    background: var(--gradient-hero);
-  }
-  
-  .gradient-card {
-    background: var(--gradient-card);
-  }
-  
-  .shadow-elegant {
-    box-shadow: var(--shadow-elegant);
-  }
-  
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
-  
-  .shadow-card {
-    box-shadow: var(--shadow-card);
-  }
-  
-  .transition-smooth {
-    transition: var(--transition-smooth);
-  }
-  
-  .transition-bounce {
-    transition: var(--transition-bounce);
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-  
-  @keyframes glow {
-    from { box-shadow: var(--shadow-elegant); }
-    to { box-shadow: var(--shadow-glow); }
   }
 }
