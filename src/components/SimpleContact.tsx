@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Calendar, Twitter, Newspaper } from "lucide-react";
+import { Mail, MapPin, Calendar, Twitter, Newspaper } from "lucide-react";
 
 const SimpleContact = () => {
   return (
@@ -21,16 +21,6 @@ const SimpleContact = () => {
                 <div className="font-medium">Email</div>
                 <a className="text-sm text-primary hover:underline" href="mailto:jmaroon@mail.wlu.edu">
                   jmaroon@mail.wlu.edu
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 p-4 bg-card rounded-lg border">
-              <Phone className="w-5 h-5 text-muted-foreground" />
-              <div className="text-left">
-                <div className="font-medium">Phone</div>
-                <a className="text-sm text-primary hover:underline" href="tel:+16125126977">
-                  (612) 512-6977
                 </a>
               </div>
             </div>

@@ -63,12 +63,6 @@ const SimpleHero = () => {
               <Github className="h-4 w-4" />
               GitHub
             </a>
-            <a
-              className="inline-flex items-center gap-2 rounded-full border border-border/60 px-4 py-2 transition-colors hover:border-primary hover:text-primary"
-              href="tel:+16125126977"
-            >
-              (612) 512-6977
-            </a>
           </div>
         </div>
       </div>
