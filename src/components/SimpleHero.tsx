@@ -37,9 +37,6 @@ const SimpleHero = () => {
 
         <div className="space-y-8 text-center md:text-left">
           <div className="space-y-4">
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary/80">
-              Product Management & AI Strategy
-            </p>
             <h1 className="text-4xl font-bold sm:text-5xl">Jackson Maroon</h1>
             <p className="text-lg text-muted-foreground sm:text-xl">
               Product Manager & AI Enthusiast with experience at Kearney, NIH, and Washington &amp; Lee. I shape
@@ -54,9 +51,6 @@ const SimpleHero = () => {
                 Contact
               </a>
             </Button>
-            <span className="max-w-xs text-center text-sm text-muted-foreground md:text-left">
-              Connect via the dock below for LinkedIn, Twitter, and Substack.
-            </span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground md:justify-start">

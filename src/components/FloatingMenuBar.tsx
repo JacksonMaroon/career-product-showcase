@@ -97,7 +97,7 @@ const socialLinks: SocialLink[] = [
     icon: XLogo,
   },
   {
-    href: "https://substack.com/@jackmaroon?utm_source=user-menu",
+    href: "https://jacksonmarooon.substack.com",
     label: "Substack",
     icon: SubstackLogo,
   },

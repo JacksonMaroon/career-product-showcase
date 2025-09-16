@@ -64,11 +64,11 @@ const SimpleContact = () => {
                 <div className="font-medium">Substack</div>
                 <a
                   className="text-sm text-primary hover:underline"
-                  href="https://substack.com/@jackmaroon?utm_source=user-menu"
+                  href="https://jacksonmarooon.substack.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  jackmaroon.substack.com
+                  jacksonmarooon.substack.com
                 </a>
               </div>
             </div>
