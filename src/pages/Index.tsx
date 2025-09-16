@@ -3,10 +3,11 @@ import SimpleExperience from "@/components/SimpleExperience";
 import SimpleProjects from "@/components/SimpleProjects";
 import SimpleEducation from "@/components/SimpleEducation";
 import SimpleContact from "@/components/SimpleContact";
+import FloatingMenuBar from "@/components/FloatingMenuBar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
       <main>
         <SimpleHero />
         <SimpleExperience />
@@ -21,6 +22,7 @@ const Index = () => {
           </p>
         </div>
       </footer>
+      <FloatingMenuBar />
     </div>
   );
 };
