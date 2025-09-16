@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, MapPin, Calendar } from "lucide-react";
+import { Mail, MapPin, Calendar } from "lucide-react";
 
 const portraitImageUrl = "https://avatars.githubusercontent.com/u/124005183?v=4";
 
@@ -51,18 +51,6 @@ const SimpleHero = () => {
                 Contact
               </a>
             </Button>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground md:justify-start">
-            <a
-              className="inline-flex items-center gap-2 rounded-full border border-border/60 px-4 py-2 transition-colors hover:border-primary hover:text-primary"
-              href="https://github.com/JacksonMaroon"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github className="h-4 w-4" />
-              GitHub
-            </a>
           </div>
         </div>
       </div>
