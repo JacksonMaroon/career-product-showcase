@@ -79,7 +79,7 @@ const SimpleContact = () => {
 
               <div className="space-y-3">
                 <Button className="w-full" asChild>
-                  <a href="mailto:jmaroon@mail.wlu.edu?subject=PM Opportunity Discussion">Schedule a Conversation</a>
+                  <a href="https://cal.com/jackson-maroon">Schedule a Conversation</a>
                 </Button>
                 <Button variant="outline" className="w-full" asChild>
                   <a href="mailto:jmaroon@mail.wlu.edu?subject=Resume Request">Request Full Resume</a>
