@@ -188,13 +188,13 @@ const FloatingMenuBar = () => {
               <Sun
                 className={cn(
                   "absolute inset-0 m-auto h-4 w-4 transition-all",
-                  theme === "dark" ? "scale-100 opacity-100" : "scale-0 opacity-0",
+                  theme === "dark" ? "scale-0 opacity-0" : "scale-100 opacity-100",
                 )}
               />
               <Moon
                 className={cn(
                   "absolute inset-0 m-auto h-4 w-4 transition-all",
-                  theme === "dark" ? "scale-0 opacity-0" : "scale-100 opacity-100",
+                  theme === "dark" ? "scale-100 opacity-100" : "scale-0 opacity-0",
                 )}
               />
               <span className="sr-only">Toggle color theme</span>
