@@ -85,30 +85,32 @@ const socialLinks: SocialLink[] = [
     href: "https://linkedin.com/in/jacksonmaroon",
     label: "LinkedIn",
     icon: LinkedInLogo,
-    iconClassName: "text-[#0A66C2]",
   },
   {
     href: "https://github.com/JacksonMaroon",
     label: "GitHub",
     icon: GitHubLogo,
-    iconClassName: "text-[#181717] dark:text-white",
   },
   {
     href: "https://x.com/Jack_Maroon_",
     label: "X (Twitter)",
     icon: XLogo,
-    iconClassName: "text-black dark:text-white",
   },
   {
     href: "https://substack.com/@jackmaroon?utm_source=user-menu",
     label: "Substack",
     icon: SubstackLogo,
-    iconClassName: "text-[#FF6719]",
   },
 ];
 
 const FloatingMenuBar = () => {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof document === "undefined") {
+      return "light";
+    }
+
+    return document.documentElement.classList.contains("dark") ? "dark" : "light";
+  });
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -117,14 +119,39 @@ const FloatingMenuBar = () => {
 
     const htmlElement = document.documentElement;
     const storedTheme = window.localStorage.getItem("theme");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const initialTheme: Theme = storedTheme === "light" || storedTheme === "dark"
       ? storedTheme
-      : htmlElement.classList.contains("dark")
+      : mediaQuery.matches
         ? "dark"
         : "light";
 
     htmlElement.classList.toggle("dark", initialTheme === "dark");
     setTheme(initialTheme);
+
+    const handleSystemThemeChange = (event: MediaQueryListEvent) => {
+      if (window.localStorage.getItem("theme")) {
+        return;
+      }
+
+      const nextTheme: Theme = event.matches ? "dark" : "light";
+      htmlElement.classList.toggle("dark", nextTheme === "dark");
+      setTheme(nextTheme);
+    };
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", handleSystemThemeChange);
+    } else if (typeof mediaQuery.addListener === "function") {
+      mediaQuery.addListener(handleSystemThemeChange);
+    }
+
+    return () => {
+      if (typeof mediaQuery.removeEventListener === "function") {
+        mediaQuery.removeEventListener("change", handleSystemThemeChange);
+      } else if (typeof mediaQuery.removeListener === "function") {
+        mediaQuery.removeListener(handleSystemThemeChange);
+      }
+    };
   }, []);
 
   const handleToggleTheme = () => {
@@ -185,7 +212,7 @@ const FloatingMenuBar = () => {
                 variant="ghost"
                 size="icon"
                 asChild
-                className="group text-muted-foreground hover:text-inherit"
+                className="group text-foreground/80 hover:text-foreground"
               >
                 <a
                   href={href}
@@ -196,7 +223,7 @@ const FloatingMenuBar = () => {
                 >
                   <Icon
                     className={cn(
-                      "h-5 w-5 transition-transform group-hover:scale-110",
+                      "h-5 w-5 text-foreground transition-transform group-hover:scale-110",
                       iconClassName,
                     )}
                   />
