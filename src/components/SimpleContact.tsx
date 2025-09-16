@@ -98,10 +98,6 @@ const SimpleContact = () => {
             </div>
           </div>
         </div>
-
-        <p className="text-sm text-muted-foreground">
-          Prefer social? Use the floating menu to jump to LinkedIn, Twitter, or Substack anytime.
-        </p>
       </div>
     </section>
   );
