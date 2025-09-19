@@ -9,10 +9,16 @@ const SimpleEducation = () => {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section
+      id="education"
+      aria-labelledby="education-title"
+      className="py-20 px-6"
+    >
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">Education & Skills</h2>
-        
+        <h2 id="education-title" className="text-3xl font-bold mb-12 text-center">
+          Education & Skills
+        </h2>
+
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Education */}
           <div>

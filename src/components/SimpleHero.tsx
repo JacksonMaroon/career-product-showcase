@@ -5,7 +5,12 @@ const portraitImageUrl = "https://avatars.githubusercontent.com/u/124005183?v=4"
 
 const SimpleHero = () => {
   return (
-    <section className="relative overflow-hidden py-24 px-6">
+    <header
+      id="intro"
+      aria-labelledby="hero-title"
+      aria-describedby="hero-summary"
+      className="relative overflow-hidden py-24 px-6"
+    >
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/25 blur-3xl md:left-0 md:-translate-x-1/3 md:-translate-y-1/3" />
         <div className="absolute bottom-0 right-0 h-60 w-60 translate-x-1/4 rounded-full bg-primary/10 blur-3xl" />
@@ -37,8 +42,10 @@ const SimpleHero = () => {
 
         <div className="space-y-8 text-center md:text-left">
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold sm:text-5xl">Jackson Maroon</h1>
-            <p className="text-lg text-muted-foreground sm:text-xl">
+            <h1 id="hero-title" className="text-4xl font-bold sm:text-5xl">
+              Jackson Maroon
+            </h1>
+            <p id="hero-summary" className="text-lg text-muted-foreground sm:text-xl">
               Product Manager & AI Enthusiast with experience at Kearney, NIH, and Washington &amp; Lee. I shape
               user-focused, data-driven products that deliver measurable impact.
             </p>
@@ -54,7 +61,7 @@ const SimpleHero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

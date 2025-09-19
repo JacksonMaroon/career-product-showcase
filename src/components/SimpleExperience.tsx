@@ -57,13 +57,19 @@ const SimpleExperience = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background via-background to-muted">
+    <section
+      id="experience"
+      aria-labelledby="experience-title"
+      className="py-20 px-6 bg-gradient-to-b from-background via-background to-muted"
+    >
       <div className="max-w-5xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <Badge variant="secondary" className="mx-auto w-fit px-4 py-1 text-sm uppercase tracking-wide">
             Professional Journey
           </Badge>
-          <h2 className="text-3xl font-bold sm:text-4xl">Work Experience</h2>
+          <h2 id="experience-title" className="text-3xl font-bold sm:text-4xl">
+            Work Experience
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A snapshot of the roles where I have delivered impact across consulting, healthcare innovation,
             and campus wellness.

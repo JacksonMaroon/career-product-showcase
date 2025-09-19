@@ -3,9 +3,15 @@ import { Mail, MapPin, Calendar, Twitter, Newspaper } from "lucide-react";
 
 const SimpleContact = () => {
   return (
-    <section className="py-20 px-6 bg-muted/30">
+    <section
+      id="contact"
+      aria-labelledby="contact-title"
+      className="py-20 px-6 bg-muted/30"
+    >
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
+        <h2 id="contact-title" className="text-3xl font-bold mb-8">
+          Get In Touch
+        </h2>
         <p className="text-lg text-muted-foreground mb-12">
           I'm actively seeking product management opportunities and would love to discuss how my experience can
           contribute to your team's success. Feel free to reach out directly or connect via social platforms.
