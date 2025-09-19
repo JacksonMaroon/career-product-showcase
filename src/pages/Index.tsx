@@ -8,7 +8,20 @@ import FloatingMenuBar from "@/components/FloatingMenuBar";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <main>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-background focus:px-4 focus:py-2 focus:text-foreground"
+      >
+        Skip to main content
+      </a>
+      <nav aria-label="Breadcrumb" className="sr-only">
+        <ol>
+          <li>
+            <a href="/">Home</a>
+          </li>
+        </ol>
+      </nav>
+      <main id="main-content">
         <SimpleHero />
         <SimpleExperience />
         <SimpleProjects />

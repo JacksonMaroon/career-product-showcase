@@ -38,16 +38,24 @@ const SimpleProjects = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-muted/30">
+    <section
+      id="projects"
+      aria-labelledby="projects-title"
+      className="py-20 px-6 bg-muted/30"
+    >
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
-        
+        <h2 id="projects-title" className="text-3xl font-bold mb-12 text-center">
+          Projects
+        </h2>
+
         <div className="space-y-12">
           {projects.map((project, index) => (
-            <div key={index} className="bg-card rounded-lg border p-8">
+            <article key={index} className="bg-card rounded-lg border p-8" aria-labelledby={`project-${index}`}>
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
                 <div className="flex-1">
-                  <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+                  <h3 id={`project-${index}`} className="text-2xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
                   <p className="text-lg text-muted-foreground mb-3">{project.description}</p>
                   <p className="text-sm text-muted-foreground mb-4">{project.details}</p>
                   <Badge variant="outline" className="text-xs">{project.period}</Badge>
@@ -82,7 +90,7 @@ const SimpleProjects = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
