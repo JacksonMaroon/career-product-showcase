@@ -82,6 +82,24 @@ const SimpleEducation = () => {
             </div>
           </Card>
         </div>
+
+        <div className="mt-8 border-t pt-6">
+          <h3 className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-4">
+            Additional learning
+          </h3>
+          <ul className="grid gap-4 sm:grid-cols-2 sm:gap-6 text-sm">
+            <li>
+              <p className="font-medium">Claude Certified Architect - Foundations</p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Anthropic · Sep 2026 · Valid through Sep 2027
+              </p>
+            </li>
+            <li>
+              <p className="font-medium">AI Strategy</p>
+              <p className="mt-1 text-xs text-muted-foreground">BlueDot Impact · Jan 2026</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );
